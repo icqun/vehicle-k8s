@@ -2,7 +2,9 @@ name: Build and Deploy Dockerfiles
 run-name: ${{ github.actor }} is building Docker images 🚀
 on:
   push:
-  workflow-dispatch:
+    branches:
+      - main
+  workflow_dispatch:
 jobs:
   build-images:
     permissions: write-all
