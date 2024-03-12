@@ -9,6 +9,8 @@ FROM maven:3-eclipse-temurin-21 AS builder
 
 WORKDIR /opt/application
 
+COPY pom.xml .
+
 RUN mvn verify clean --fail-never
 
 COPY . .
